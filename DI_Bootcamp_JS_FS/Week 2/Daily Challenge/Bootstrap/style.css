@@ -1,0 +1,25 @@
+.card-bg-1{
+    background: #f1f0f0;
+    border: 1px solid #ccc;
+}
+
+
+.some-list{
+    padding:0;
+}
+
+.some-list li{
+    list-style: none;
+    color: rgb(78, 78, 247);
+    font-weight: bold;
+}
+
+.card-title{
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+button{
+    margin-top: 10px;
+}
