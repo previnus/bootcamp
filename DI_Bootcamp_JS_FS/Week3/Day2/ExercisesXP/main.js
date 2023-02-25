@@ -26,7 +26,11 @@ console.log(`I watched ${myWatchedSeriesLength} series : ${myWatchedSeriesSenten
 let index = myWatchedSeries.indexOf('the big bang theory')
 console.log(index)
 
-myWatchedSeries[index] = 'friends'
+myWatchedSeries.splice(index, 1, 'friends')
+
+console.log(myWatchedSeries)
+
+
 
 console.log(myWatchedSeries)
 
