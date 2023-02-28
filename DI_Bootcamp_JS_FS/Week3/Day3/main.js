@@ -64,7 +64,7 @@ u3 = {
 let newsfeed = [u1, u2, u3]
 console.log(newsfeed)
 
-//correction
+//Solution
 
 newsfeed =[
     {
@@ -73,11 +73,11 @@ newsfeed =[
     },
     {
         username : 'user 2',
-        timeline : 'lorem ipsum dolore'
+        timeline : 'Dolore solare ipset'
     },
     {
         username : 'user 3',
-        timeline : 'lorem ipsum dolore'
+        timeline : 'Ipsum Indicate se'
     }]
 
 // activate debugger on chrome console
