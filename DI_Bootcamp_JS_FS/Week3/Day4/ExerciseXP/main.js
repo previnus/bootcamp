@@ -30,7 +30,7 @@ if(newDog === 'Chihuahua'){
 
 /* Exercise 3 */
 
-/* let number = prompt('enter a number')
+let number = prompt('enter a number')
 
 mod = number % 2
 console.log(mod)
@@ -39,7 +39,7 @@ if(mod == 0){
     console.log('x is an even number')
 }else{
     console.log('x is an odd number')
-} */
+} 
 
 /* Exercise 4 */
 const users = ["Lea123", "Princess45", "cat&doglovers", "helooo@000"];
