@@ -53,6 +53,6 @@ if(userLength == 0){
 }else if( userLength == 2){
     console.log(`${users[0]} and ${users[1]} are online`)
 }else{
-    additionalUserLength = userLength - 2
-    console.log(`${users[0]} , ${users[1]} and ${additionalUserLength} more are online`)
+    remainingUsersLength = userLength - 2
+    console.log(`${users[0]} , ${users[1]} and ${remainingUsersLength} more are online`)
 }
