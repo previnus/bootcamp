@@ -56,3 +56,22 @@ if(userLength == 0){
     remainingUsersLength = userLength - 2
     console.log(`${users[0]} , ${users[1]} and ${remainingUsersLength} more are online`)
 }
+
+// using switch statements - alternative
+
+switch(userLength){
+    case 0:
+        console.log('no one is online')
+        break;
+    case 1:
+        console.log(`${users[0]} is online`)
+        break;
+    case 2:
+        console.log(`${users[0]} and ${users[1]} are online`)
+        break;
+    default:
+        remainingUsersLength = userLength - 2
+        console.log(`${users[0]} , ${users[1]} and ${remainingUsersLength} more are online`)
+        break;
+}
+    
