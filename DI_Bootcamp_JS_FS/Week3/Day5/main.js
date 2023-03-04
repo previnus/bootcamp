@@ -200,7 +200,7 @@ for(let n = 0; n < names.length; n++){
 
 
 //2.1
-let personNames= ["john", "sarah", "jack", "Robin", 12, ]
+let personNames= ["john", "sarah", "jack", 11, 12, "jason", "Robin", "Jane", 20, "Logan"]
 
 for(let e = 0; e < personNames.length; e++){
         const personItem = personNames[e]
@@ -208,7 +208,10 @@ for(let e = 0; e < personNames.length; e++){
         console.log(personItem)
 
         if(typeNameItem  != 'string'){
-            break; // cannot continue the loop because the loop is broken
-        } 
+            break; // break the array at the first encouter
+        } else{
+            //return the iterations before the break
+            console.log(personItem)
+        }
 }
 
