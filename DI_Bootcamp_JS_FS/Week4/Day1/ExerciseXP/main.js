@@ -55,10 +55,12 @@ for( let c = 0; c < colors.length; c++){
 console.log(newColorsArray)
 
 for( let nc = 0; nc < newColorsArray.length; nc++){
-    let numPos = parseInt(newColorsArray[nc].substring(4, 5))
-    let colorName = newColorsArray[nc].substring(16)
+    let arrSplit = newColorsArray[nc].split(" ")
+    let numPos = parseInt(arrSplit[1].substring(1))
+    let colorName = arrSplit[arrSplit.length - 1]
     console.log(colorName)
     console.log(numPos)
+    
     if(numPos === 1){
         console.log(`My ${numPos}st choice is ${colorName}`)
     }else if(numPos === 2){
