@@ -130,10 +130,10 @@ console.log(danRent)
 /* Exercise 5 */
 
 const family = {
-    mother: 'Tamy',
-    father: 'John',
+    mother: 'Tammy',
+    father: 'Tom',
     son: 'Timmy',
-    daughter: 'Tani',
+    daughter: 'Tania',
     baby: 'Tiny'
 }
 
@@ -153,7 +153,7 @@ const details = {
 
   for(let name in details){
     loop = name + ' ' + details[name]
-    newName = newName + loop + ' '
+    newName += loop + ' '
   }
 
   console.log(newName)
