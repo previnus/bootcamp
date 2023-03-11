@@ -25,7 +25,8 @@ const infoAboutPerson = (personName, personAge, personFavoriteColor) => {
 
 }
 
-infoAboutPerson("john", 36, "white")
+infoAboutPerson("David", 45, "blue")
+infoAboutPerson("Josh", 12, "yellow")
 
 /* Exercise 2 */
 
