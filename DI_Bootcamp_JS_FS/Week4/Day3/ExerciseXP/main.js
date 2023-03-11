@@ -143,6 +143,22 @@ console.log(number45)
 
 /* Exercise 4 */
 
+/* Add the stock and prices objects to your js file.
+
+Create an array called shoppingList with the following items: “banana”, “orange”, and “apple”. It means that you have 1 banana, 1 orange and 1 apple in your cart.
+
+Create a function called myBill() that takes no parameters.
+
+The function should return the total price of your shoppingList. In order to do this you must follow these rules:
+The item must be in stock. (Hint : check out if .. in)
+If the item is in stock find out the price in the prices object.
+
+Call the myBill() function.
+
+Bonus: If the item is in stock, decrease the item’s stock by 1
+ */
+
+
 const stock = { 
     "banana": 6, 
     "apple": 0,
@@ -161,14 +177,41 @@ const prices = {
 
 shoppingList = ["banana", "orange", "apple"]
 
-const myBill = () => {
-    shoppingList = ["banana", "orange", "apple"]
+const myBill = (list, stock, prices) => {
 
-    if(!Array.isArray(shoppingList)){
-        return false;
+    let availableListArr = []
+    let sum = 0
+    //check if shopping list is found in stock and reduce stock if found
+    for(let i = 0; i < shoppingList.length; i++){
+        for(const property in stock) {
+            if(shoppingList[i] == property && stock[property] != 0){
+                stock[property] = stock[property] - 1 //reduce stock by 1
+                availableListArr.push(property)
+                //console.log(stock[property])
+            }
+          }
     }
 
-    
+    console.log(stock)
+
+
+    for(let p = 0; p < availableListArr.length; p++){
+        for(const fruit in prices){
+            //console.log(fruit)
+            if(availableListArr[p] == fruit){
+                console.log(prices[fruit])
+                sum += prices[fruit]
+            }
+        }
+    }
+
+    console.log(sum)
+    console.log(stock)
+
+    return `Total Bill amount is $${sum}`
+
 }
 
-myBill()
+let shopping = myBill(shoppingList, stock, prices)
+console.log(shopping)
+
