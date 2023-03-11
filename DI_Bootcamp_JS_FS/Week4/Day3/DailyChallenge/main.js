@@ -10,6 +10,22 @@ that will get displayed as:stars and words */
 let promptTxt = prompt('Enter a sentence separated by , after each WORD')
 //let promptTxt = 'Helloooooooooo, This , Is , a , new, phrase'
 
+/* 
+//Another way of using the prompt - After each Enter Press, the text will be added to a string i.e strPrompt
+let promptTxt = prompt('Enter a word and then press ENTER, To stop the loop type END')
+let strPrompt = ""
+
+while(promptTxt !== 'END'){
+
+    strPrompt += promptTxt + ", "
+    promptTxt = prompt('Enter a word and then press ENTER, To stop the loop type END')
+
+} 
+
+console.log(strPrompt)
+*/
+
+
 const textToArr = (text) => {
     arr = text.split(",")
     newarray = []
@@ -47,7 +63,7 @@ const stars = (arr) => {
     let resultString = ""
     let maxStars = ""
 
-    //get the string containing maximum number of stars
+    //make the string containing maximum number of stars
     for( let i = 0; i < maxStarsCount ; i++){
         maxStars += "*"
     }
