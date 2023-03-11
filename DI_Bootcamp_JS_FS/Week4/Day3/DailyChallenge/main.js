@@ -28,19 +28,17 @@ const textToArr = (text) => {
 const findLongestWord = (arr) => {
 
     var longest = 0;
-    let word = ""
 
     for(var i = 0; i < arr.length; i++) {
        if(arr[i].length >= longest) {
-         longest = arr[i].length;
-         let word = arr[i]
+         longest = arr[i].length
           } 
        }
     return longest
 }
 
 //use for debugging
-//console.log(findLongestWord(arr))
+//console.log(findLongestWord(promptTxt))
 
 const stars = (arr) => {
     arr = textToArr(arr)
