@@ -215,3 +215,229 @@ const myBill = (list, stock, prices) => {
 let shopping = myBill(shoppingList, stock, prices)
 console.log(shopping)
 
+
+/* Exercise 5 */
+
+/* A quarters is 0.25
+A dimes is 0.10
+A nickel is 0.05
+A penny is 0.01 */
+
+//changeEnough(4.25, [25, 20, 5, 0])
+
+const changeEnough = (itemPrice, amountOfChange) => {
+
+    sumOfQuarters = amountOfChange[0] * 0.25
+    sumOfDimes = amountOfChange[1] * 0.10
+    sumOfNickel = amountOfChange[2] * 0.05
+    sumOfPenny = amountOfChange[3] * 0.01
+
+    sumOfChange = sumOfQuarters + sumOfDimes + sumOfNickel + sumOfPenny
+
+    if(sumOfChange >= itemPrice){
+        return true
+    }else{
+        return false
+    }
+
+}
+
+console.log(changeEnough(4.25, [25, 20, 5, 0]))
+console.log(changeEnough(10.25, [25, 20, 5, 0]))
+
+
+/* Exercise 6 */
+
+/* Let’s create functions that calculate your vacation’s costs:
+
+Define a function called hotelCost().
+It should ask the user for the number of nights they would like to stay in the hotel.
+If the user doesn’t answer or if the answer is not a number, ask again.
+The hotel costs $140 per night. The function should return the total price of the hotel.
+
+ */
+
+const hotelCost = () =>{
+    let text = "" 
+    text = prompt("please enter number of nights")
+
+    while(isNaN(text) || text.length < 1){
+        console.log(text)
+        text = prompt("please enter number of nights")
+    }
+
+    
+    text = parseInt(text) * 140
+    
+    return text
+}
+
+//const hotel = hotelCost()
+//console.log(hotel)
+
+/* 
+
+Define a function called planeRideCost().
+It should ask the user for their destination.
+If the user doesn’t answer or if the answer is not a string, ask again.
+The function should return a different price depending on the location.
+“London”: 183$
+“Paris” : 220$
+All other destination : 300$
+
+
+*/
+
+const planeRideCost = () =>{
+    let text = "" 
+    let destination = ""
+    text = prompt("What is your destination")
+
+    while(!isNaN(text) || text.length < 1 ){
+        console.log(text)
+        text = prompt("What is your destination")
+    }
+    
+    if(text === "London"){
+        destination = `183$`
+    }else if(text === "Paris"){
+        destination = '220$'
+    }else{
+        destination = '300$'
+    }
+    
+    return destination
+}
+
+/* const ride = planeRideCost()
+console.log(ride) */
+
+
+/*
+
+
+Define a function called rentalCarCost().
+It should ask the user for the number of days they would like to rent the car.
+If the user doesn’t answer or if the answer is not a number, ask again.
+Calculate the cost to rent the car. The car costs $40 everyday.
+If the user rents a car for more than 10 days, they get a 5% discount.
+The function should return the total price of the car rental.
+
+*/
+const rentalCarCost = () =>{
+    let text = "" 
+    let rental = ""
+    text = prompt("Number of days you would like to rent a car")
+
+    while(isNaN(text) || text.length < 1 ){
+        console.log(text)
+        text = prompt("Number of days you would like to rent a car")
+    }
+    
+    if(text <= 10){
+        rental = text * 40
+    }else{
+        rental = (text * 40) * ((100-5)/100)
+    }
+    
+    return rental
+}
+
+/* const rental = rentalCarCost()
+console.log(rental) */
+
+
+/*
+Define a function called totalVacationCost() that returns the total cost of the user’s vacation by calling the 3 functions that you created above.
+Example : The car cost: $x, the hotel cost: $y, the plane tickets cost: $z.
+Hint: You have to call the functions hotelCost(), planeRideCost() and rentalCarCost() inside the function totalVacationCost().
+
+Call the function totalVacationCost()
+
+*/
+
+const totalVacationCost = () => {
+    let x = rentalCarCost()
+    let y = hotelCost()
+    let z = planeRideCost()
+
+    let result = `The car cost: ${x}$, the hotel cost: ${y}$, the plane tickets cost: ${z}.`
+
+    return result
+}
+
+/* result = totalVacationCost()
+console.log(result) */
+/*
+
+Bonus: Instead of using a prompt inside the 3 first functions, only use a prompt inside the totalVacationCost() function. You need to change the 3 first functions, accordingly. */
+
+const hotelCostBonus = (text) =>{
+    
+    text = parseInt(text) * 140
+    
+    return text
+}
+
+
+const planeRideCostBonus = (text) =>{
+    
+    if(text === "London"){
+        destination = `183$`
+    }else if(text === "Paris"){
+        destination = '220$'
+    }else{
+        destination = '300$'
+    }
+    
+    return destination
+}
+
+const rentalCarCostBonus = (text) =>{
+    
+    if(text <= 10){
+        rental = text * 40
+    }else{
+        rental = (text * 40) * ((100-5)/100)
+    }
+    
+    return rental
+}
+
+const totalVacationCostBonus = () => {
+    let x = y = z = rental = hotel = plane = ""
+
+    //Rental Car Cost
+    x = prompt("Number of days you would like to rent a car")
+
+    while(isNaN(x) || x.length < 1 ){
+        x = prompt("Number of days you would like to rent a car")
+    }
+
+    rental = rentalCarCostBonus(x)
+
+    // Hotel Cost
+    y = prompt("please enter number of nights")
+
+    while(isNaN(y) || y.length < 1){
+        y = prompt("please enter number of nights")
+    }
+    hotel = hotelCostBonus(y)
+
+
+    // Plane Flight Cost 
+    z = prompt("What is your destination")
+
+    while(!isNaN(z) || z.length < 1 ){
+        z = prompt("What is your destination")
+    }
+    
+    plane = planeRideCostBonus(z)
+
+    let result = `The car cost: ${rental}$, the hotel cost: ${hotel}$, the plane tickets cost: ${plane}.`
+
+    return result
+}
+
+const vacationBonus = totalVacationCostBonus()
+console.log(vacationBonus)
