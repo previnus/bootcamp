@@ -91,11 +91,11 @@ console.log(john)
 
 /* Object Methods */
 
-let person = {
+let person5 = {
     fname: 'bob',
     lname: 'johnson',
     getfullname: function() {
-        return `${person.fname} ${person.lname}`
+        return `${person5.fname} ${person5.lname}`
     },
     getfull: function() {
         return `${this.fname} ${this.lname}`
@@ -231,18 +231,18 @@ const copy = [...original];
 console.log(copy);
 
 //SPREADING IN OBJECTS
-const person = {
+const person3 = {
     fname: 'Bob',
     lname: 'Bobson',
 }
 const clone = {
-    ...person
+    ...person3
 }
 console.log(clone);
 
 const imperfectClone = {
     lname: 'Toulet',
-    ...person,
+    ...person3,
     fname: 'Damien',
 }
 console.log(imperfectClone);
