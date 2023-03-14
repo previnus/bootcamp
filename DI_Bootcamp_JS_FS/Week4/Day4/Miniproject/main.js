@@ -1,17 +1,15 @@
 const playTheGame = () => {
-    let confirmation
     const computerNumber = Math.floor(Math.random() * 9) + 1; // get number from 1 to 9
     console.log(computerNumber)
-    confirmation = confirm("Are you sure you want to play this game?")
+    let confirmation = confirm("Are you sure you want to play this game?")
 
     if(!confirmation){
         alert("No problem, Goodbye")
     }else{
-
         numberPrompt = prompt("please enter a number between 0 and 10")
         numberPrompt = parseInt(numberPrompt)
 
-        /*         
+        /* 
         if(isNaN(numberPrompt) || numberPrompt.length < 1){
             alert("Sorry Not a number, Goodbye")
         }else{
