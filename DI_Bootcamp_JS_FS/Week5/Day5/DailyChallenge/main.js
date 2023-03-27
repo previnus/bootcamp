@@ -4,12 +4,9 @@ const resetHtml = taskLists.innerHTML
 const textInput = document.querySelector('input.txtinput')
 const submit = document.querySelector('button.submit')
 const clear = document.querySelector('.clear')
-const checkbox = document.querySelectorAll('input.checkbox')
+
 const returnInput = ""
 const tasks = []
-
-
-
 
 
 form.addEventListener('submit', (e) => {
@@ -23,6 +20,10 @@ form.addEventListener('submit', (e) => {
         taskLists.innerHTML = resetHtml //reset the form back to default state
         tasks.push(textInput.value) // push string into array
         addTask(tasks) // add html element
+        checkBox()
+        deleteTask()
+
+
     }
 
     form.reset() //reset the form
@@ -33,24 +34,6 @@ clear.addEventListener('click', (e) => {
     e.preventDefault()
     window.location.reload()
 })
-
-
-checkbox.forEach((e) => {
-    e.addEventListener('change', function(event){
-    
-    console.log(e.nextElementSibling)
-        if(e.checked){
-            e.nextElementSibling.style.textDecoration = 'line-through'
-        }else(
-            e.nextElementSibling.style.textDecoration = ''
-        )
-    })
-})
-
-
-
-
-
 
 
 const addTask = (task) => {
@@ -69,4 +52,30 @@ const addTask = (task) => {
             document.querySelector(".listTasks").appendChild(el)
         }
 
+}
+
+const checkBox = () => {
+    let checkbox = document.querySelectorAll('input.checkbox')
+
+    checkbox.forEach((e) => {
+        e.addEventListener('change', event => {
+        
+        //console.log(e.nextElementSibling)
+            if(e.checked){
+                e.nextElementSibling.style.textDecoration = 'line-through'
+            }else(
+                e.nextElementSibling.style.textDecoration = ''
+            )
+        })
+    })
+}
+
+const deleteTask = (tasks) => {
+    let delelement= document.querySelectorAll('.delete')
+
+    delelement.forEach(e => {
+        e.addEventListener('click', event => {
+            event.target.parentNode.remove()
+        })
+    })
 }
