@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <form id="myform">
+            <input class="txtinput" type="text" name="task">
+            <button class="submit" type="submit" name="submit">Add</button>
+        </form>
+    
+    
+        <div class="listTasks">
+            <div class="tasklist">
+                <i class="fa fa-window-close delete" aria-hidden="true"></i>
+                <input type="checkbox" class="checkbox">
+                <span class="text">This is a text</span>    
+            </div>
+            <div class="tasklist">
+                <i class="fa fa-window-close delete" aria-hidden="true"></i>
+                <input type="checkbox" class="checkbox">
+                <span class="text">This is another task</span>    
+            </div>
+        </div>
+
+        <div class = "clear button">
+            Clear
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>

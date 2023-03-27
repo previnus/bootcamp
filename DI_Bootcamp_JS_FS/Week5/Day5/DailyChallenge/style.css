@@ -1,0 +1,62 @@
+body{
+    background-color: #FF4E5A;
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+
+div.container{
+    width: 300px;
+    background: white;
+    margin: auto;
+    padding: 20px;
+}
+
+#myform{
+    width: 100%;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+.checkbox, .text{
+    margin-left: 10px;
+}
+
+button{
+    background: rgba(255, 255, 255, 0);
+    color: rgb(13, 103, 230);
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    border: none;
+    position: relative;
+    text-transform: uppercase;
+    bottom: 40px;
+    left: 240px;
+}
+
+.listTasks{
+    color: #FF4E5A;
+}
+
+.tasklist{
+    padding: 10px;
+    border-bottom: 1px solid #FF4E5A;
+}
+
+i.fa{
+    margin-right: 10px;
+}
+
+
+.clear{
+    color: #FF4E5A;
+    text-align: right;
+    margin-top: 10px;
+    cursor: default;
+}
