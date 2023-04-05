@@ -8,6 +8,27 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div id="myDiv" style="height: 100px; width: 300px;"></div>
+
+    <script>
+        
+        const getRandomColor = () => {
+          var letters = "0123456789ABCDEF";
+          var color = "#";
+          for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+          }
+          return color;
+        }
+        
+        const setRandomBackground = () => {
+          var div = document.querySelector("myDiv");
+          var color = getRandomColor();
+          div.style.transition = "background-color 2s ease-in-out";
+          div.style.backgroundColor = color;
+        }
+        
+        setInterval(setRandomBackground, 3000);
+        </script>
 </body>
 </html>
