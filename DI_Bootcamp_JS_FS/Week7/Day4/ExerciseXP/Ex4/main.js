@@ -9,10 +9,7 @@ The function should add a div in the nabvar, displaying the name of the user and
 ((user) => {
     const div = document.createElement('div');
     div.classList.add('navbar-text');
-    div.innerHTML = `
-      <img src="image.jpg" alt="Profile Picture" width="30" height="30" class="rounded-circle mr-2">
-      Welcome, ${user}
-    `;
-    const navbarNav = document.querySelector('.navbar-nav');
-    navbarNav.appendChild(div);
+    div.innerHTML = `img src="image.jpg" alt="Profile Picture" width="30" height="30" class="rounded-circle mr-2">Welcome, ${user}`;
+    const nav = document.querySelector('.navbar-nav');
+    nav.appendChild(div);
   })('John');
