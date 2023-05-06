@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <form method="post" action="page.html" >
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <input type="submit" value="Send">
+          </form>
+          
+        <!-- 
+            When the user clicks the "Send" button, 
+            the form will be submitted with a POST method and 
+            the data will be sent to the server in the request body, 
+            instead of being appended to the URL. 
+    
+        -->
+
+    <script src="main.js"></script>
+</body>
+</html>
