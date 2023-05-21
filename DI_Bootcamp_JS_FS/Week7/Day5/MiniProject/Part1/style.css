@@ -1,0 +1,47 @@
+body{
+    background: burlywood;
+    box-sizing: border-box;
+}
+
+.content{
+    max-width: 500px;
+    margin: 10rem auto;
+    padding: 50px;
+    background: rgb(78, 73, 73);
+    text-align: center;
+}
+
+img{
+    width: 50px;
+}
+
+.quote{
+    color: white;
+    font-size: 50px;
+    text-align: left;
+    display: inline;
+    margin-left: 10px;
+}
+
+.author{
+    color: #10ae9e;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: right;
+}
+
+.button{
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background: #10ae9e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background: rgb(255, 255, 255);
+    color: #10ae9e;
+}
