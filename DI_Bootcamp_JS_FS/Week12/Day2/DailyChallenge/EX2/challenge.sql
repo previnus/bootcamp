@@ -1,5 +1,4 @@
 -- Create Book Table
-
 CREATE TABLE Book (
   book_id SERIAL PRIMARY KEY,
   title VARCHAR(255) NOT NULL,
